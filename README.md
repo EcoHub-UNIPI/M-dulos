@@ -1,155 +1,128 @@
-# Modulos
-Lista de módulos que o MVP deverá possuir
-
-📌 Lista Geral de Funcionalidades do Projeto
-Módulo 1 – Autenticação & Gestão de Usuários
-
-Cadastro de pessoa física (com CPF válido).
-
-Cadastro de empresa (CNPJ válido via API CNPJws, plano ativo).
-
-Cadastro de ONG (CNPJ válido, sem fins lucrativos).
-
-Validação automática de CPF/CNPJ.
-
-Confirmação de e-mail no cadastro.
-
-Login e logout de usuário.
-
-Recuperação de senha via e-mail (token temporário).
-
-Edição de perfil (exceto CPF/CNPJ).
-
-Upload de foto de perfil.
-
-Módulo 2 – Eventos & Inscrições
-
-Publicar evento (ONGs e empresas).
-
-Editar ou excluir evento (até 1h antes).
-
-Inscrição em eventos (usuário comum, respeitando vagas).
-
-Explorar lista de eventos com filtros (data, categoria, local, título).
-
-Notificações automáticas por e-mail (alterações, lembretes).
-
-Validação de presença via QR Code dinâmico.
-
-Registro automático de pontos ao validar presença.
-
-Avaliação de eventos (1–5 estrelas + comentário).
-
-Cancelamento de inscrição (até 1h antes).
-
-Histórico de inscrições.
-
-Módulo 5 – Comunidade & Fórum
-
-Criar posts (texto e imagem simples).
-
-Editar ou excluir posts próprios.
-
-Criar comentários em posts.
-
-Curtir, salvar e compartilhar posts.
-
-Sistema de tags/categorias.
-
-Busca por tópicos, posts e perfis.
-
-Gestão de apelidos (nicks).
-
-Moderação de posts reportados (aprovar, ocultar, excluir).
-
-Painel de moderação e log de ações.
-
-Módulo 6 – Sistema de Pontos
-
-Acumular pontos em eventos e reciclagens.
-
-Aplicar coeficiente βt para cálculo de pontos.
-
-Dashboard de pontos atualizado em tempo real.
-
-Histórico de pontos (ganhos e gastos).
-
-Integração com recompensas (resgates).
-
-Logs de auditoria (prevenção de fraude).
-
-Módulo 7 – Geolocalização & Pontos de Coleta (V1)
-
-Lista dinâmica de pontos de coleta.
-
-Detalhes do ponto (nome, endereço, horário, contatos, tipo de acesso).
-
-Cadastro de pontos por empresas/ONGs.
-
-Validação de dados obrigatórios no cadastro.
-
-Integração com Google Maps/Waze (“abrir no mapa”).
-
-Diferenciação público/privado (ícone/tag).
-
-Indicação de disponibilidade (aberto/fechado).
-
-Módulo 7 – Sistema de Recompensas (V2)
-
-Catálogo de recompensas (nome, descrição, custo em pontos, disponibilidade).
-
-Resgate de recompensas com confirmação.
-
-Débito automático de pontos após resgate.
-
-Histórico de recompensas resgatadas.
-
-Relatórios para empresas (quantos resgates, quais ações geraram).
-
-Empresas podem sugerir novas recompensas.
-
-Métricas de engajamento (alcance médio estimado).
-
-Módulo 8 – Sistema de Notificações
-
-Envio de notificações por e-mail via SMTP.
-
-Histórico de notificações (com paginação e filtros).
-
-Preferências de usuário (ativar/desativar tipos de notificações).
-
-Templates customizáveis de e-mail (com variáveis dinâmicas).
-
-Integração com eventos de outros módulos (ex.: eventos, falhas, relatórios).
-
-Agrupamento em lote de notificações similares.
-
-Registro de falhas de envio e alertas.
-
-Painel admin para templates e monitoramento.
-
-Módulo 10 – Busca & Filtros
-
-Busca textual avançada (insensível a maiúsculas, várias palavras).
-
-Filtros por área de atuação, localização e status.
-
-Paginação de resultados.
-
-Ordenação alfabética (A–Z / Z–A).
-
-✅ Resumão das Áreas do Sistema
-
-Usuários & Autenticação – cadastros, login, perfis.
-
-Eventos – criação, inscrições, QR Code, avaliações.
-
-Comunidade – posts, comentários, fórum, moderação.
-
-Gamificação – pontos + recompensas.
-
-Geolocalização – mapa de pontos de coleta.
-
-Notificações – sistema robusto de e-mails.
-
-Busca & Filtros – indexação, filtros e ordenação.
+# 📌 Funcionalidades do Sistema
+
+## 1. Usuários & Autenticação
+- Cadastro de usuário:
+  - Pessoa física (CPF válido).
+  - Empresa (CNPJ válido via API CNPJws, plano ativo).
+  - ONG (CNPJ válido, sem fins lucrativos).
+- Validação automática de CPF/CNPJ.
+- Confirmação de e-mail no cadastro.
+- Login e logout de usuário.
+- Recuperação de senha via e-mail (token temporário).
+- Edição de perfil (exceto CPF/CNPJ).
+- Upload de foto de perfil.
+
+---
+
+## 2. Eventos & Inscrições
+- Publicar evento (ONGs e empresas).
+- Editar ou excluir evento (até 1h antes do início).
+- Inscrição em eventos (usuário comum, respeitando limite de vagas).
+- Explorar eventos com filtros:
+  - Data.
+  - Categoria.
+  - Localidade.
+  - Título ou palavra-chave.
+- Notificações automáticas por e-mail:
+  - Alterações.
+  - Lembretes de presença.
+- Validação de presença via **QR Code dinâmico**.
+- Registro automático de pontos.
+- Avaliação de eventos (1–5 estrelas + comentário).
+- Cancelamento de inscrição (até 1h antes).
+- Histórico de inscrições.
+
+---
+
+## 3. Comunidade & Fórum
+- Criar posts (texto e imagem simples).
+- Editar ou excluir posts próprios.
+- Comentar em posts.
+- Curtir, salvar e compartilhar conteúdos.
+- Sistema de tags/categorias.
+- Busca por tópicos, posts e perfis.
+- Gestão de apelidos (nicks).
+- Moderação de posts reportados:
+  - Aprovar.
+  - Ocultar.
+  - Excluir.
+- Painel de moderação com log de ações.
+
+---
+
+## 4. Gamificação (Sistema de Pontos & Recompensas)
+
+### Sistema de Pontos
+- Acúmulo automático em eventos e reciclagens.
+- Aplicação do coeficiente **βt** para cálculo de pontos.
+- Dashboard de pontos atualizado em tempo real.
+- Histórico de pontos:
+  - Ganhos.
+  - Gastos.
+- Integração com recompensas.
+- Logs de auditoria (prevenção de fraude).
+
+### Sistema de Recompensas
+- Catálogo de recompensas:
+  - Nome.
+  - Descrição.
+  - Custo em pontos.
+  - Disponibilidade.
+- Resgate de recompensas (com confirmação).
+- Débito automático de pontos após resgate.
+- Histórico de recompensas resgatadas.
+- Relatórios para empresas:
+  - Resgates realizados.
+  - Ações que geraram pontos.
+  - Alcance médio estimado.
+- Empresas podem sugerir novas recompensas.
+- Métricas de engajamento.
+
+---
+
+## 5. Geolocalização & Pontos de Coleta
+- Lista dinâmica de pontos de coleta.
+- Detalhes de pontos:
+  - Nome.
+  - Endereço.
+  - Horário de funcionamento.
+  - Contatos.
+  - Tipo de acesso (público/privado).
+- Cadastro de pontos por empresas/ONGs.
+- Validação de dados obrigatórios.
+- Integração com Google Maps/Waze:
+  - “Abrir no mapa”.
+- Diferenciação de acesso público/privado (ícone/tag).
+- Indicação de disponibilidade (aberto/fechado).
+
+---
+
+## 6. Sistema de Notificações
+- Envio de notificações por **e-mail via SMTP**.
+- Histórico de notificações:
+  - Paginado.
+  - Filtros por data, evento, prioridade.
+- Preferências de usuário:
+  - Ativar/desativar tipos de notificações.
+- Templates customizáveis de e-mail:
+  - Variáveis dinâmicas.
+  - Criação/edição/exclusão de templates.
+  - Envio de testes.
+- Integração com eventos de outros módulos:
+  - Eventos, falhas, relatórios.
+- Agrupamento em lote de notificações.
+- Registro de falhas de envio e alertas.
+- Painel administrativo para templates e monitoramento.
+
+---
+
+## 7. Busca & Filtros
+- Busca textual avançada:
+  - Insensível a maiúsculas/minúsculas.
+  - Suporte a múltiplas palavras.
+- Filtros por:
+  - Área de atuação.
+  - Localização.
+  - Status.
+- Paginação de resultados.
+- Ordenação alfabética (A–Z / Z–A).
